@@ -1,0 +1,306 @@
+:root{
+    --font-one: 'Bebas Neue', cursive;
+    --font-two: 'Josefin Sans', sans-serif;
+    --spacecadet: #2B2D42;
+    --manatee: #8D99AE;
+    --aliceblue: #EDF2F4;
+    --imperialred: #EF233C;
+    --amaranthred: #D90429;
+}
+
+/* global style*/
+* {
+    border:0;
+    margin:0;
+    list-style:none;
+}
+
+
+/**/
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/**/
+.menu{
+    height: 145px;
+    flex-direction: column;
+}
+
+.logo{
+    font-family: var(--font-one);
+    font-family: var(--font-two);
+    font-size: 30px;
+    margin: 0px 50px;
+}
+
+.search {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.search-bar{
+    flex: center;       
+    margin: 10px 60px 10px 10px;
+}
+
+.search-bar input{
+    border: 1px solid var(--imperialred);
+    border-radius: 3px 0 0 3px;
+    padding: 8px;
+    width: 500px;
+    outline: none;
+}
+
+.btn-search{
+    background-color: var(--imperialred);
+    padding: 10.7px;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    margin: 1px;
+}
+
+.btn-search:hover{
+    background-color: var(--amaranthred);
+}
+
+.btn-search i{
+    font-size: 10px;
+    color:white;
+}
+
+
+.btn-login{
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid var(--imperialred);
+    padding: 2px 15px;
+    font-size: 20px;
+}
+
+.btn-login:hover{
+    background-color: var(--manatee);
+}
+
+.icon-car {
+    font-size: 25px;
+    color: var(--spacecadet);
+    margin: 15px;
+}
+
+.icon-car:hover{
+    color: var(--manatee);
+}
+
+.sub-menu{
+    justify-content: flex-start;
+    margin: 0px 20px;
+    border: 1px;
+    width: 100%;
+}
+
+.sub-menu i {
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0px 50px;
+    padding: 5px;
+}
+
+.sub-menu-list{
+    font-family: var(--font-one);
+    font-family: var(--font-two);
+    padding: 0;
+}
+
+.sub-menu-list li{
+    margin: 10px;
+}
+
+.sub-menu-list li:hover{
+    color: var(--amaranthred);
+    cursor: pointer;
+}
+
+.red {
+    color: var(--imperialred);
+}
+
+.red:hover{
+    background-color: var(--amaranthred) !important;
+    color: black !important;
+}
+
+#outlet {
+    margin-left: 150px;
+}
+
+.slide-menu{
+    display:none;
+}
+
+.mobile{
+    visibility: hidden;
+}
+
+/* menu style mobile*/
+@media only screen and (max-width: 600px){
+    .menu{
+        background-color: black;
+        width: 100vw;
+        height: 70px;
+        flex-direction: row;
+    }
+
+    .mobile{
+        visibility: visible;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .sub-menu{
+        display: none;
+    }
+
+    .logo{
+        color: yellow;
+        margin: 0 auto;
+    }
+
+    .hamburg{
+        margin: 0 30px 0 10px;
+        transition: 0.5s;
+    }
+
+    .hamburg.ativo{
+        margin-left: 500px;
+    }
+
+    .line{
+        background-color: white;
+        width: 50px;
+        height: 5px;
+        margin: 2px;
+    }
+
+    .l1.ativo{
+        transform: rotate(45deg) translate(8px, 0);
+        transition: .8s;
+        width: 40px;
+    }
+
+    .l2.ativo{
+        transform: translate(-250px, 0px);
+        transition: 2s;
+        opacity: 0;
+    }
+
+    .l3.ativo{
+        transform: rotate(-45deg) translate(12px, -3px);;
+        transition: .8s;
+        width: 40px;
+    }
+
+    .icon-search{
+        color: white;
+        font-size: 20px;
+    }
+
+    .icon-car{
+        color: white;
+        font-size: 20px;    
+    }
+
+    .slide-menu{
+        display: flex;
+        transition: .5s ease;
+        position: absolute;
+        top: 0;
+        left: -70vw;
+        background-color:black;
+        z-index: 1;
+        height: 100vh;
+        width: 40%;
+    }
+
+    .slide-list{
+        color:white;
+        font-size: 20;
+        padding:10px;
+    }
+
+    .slide-list li{
+        background-color: black;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        padding: 15px 0px 15px 30px;
+    }
+
+    .entrar{
+        background-color: white !important;
+        color:black;
+    }
+
+    .slide-menu.ativo{
+        left: 0;
+    }
+}
+
+
+
+/* estilo da section ofertas*/
+.ofertas{
+    flex-direction: column;
+}
+
+.ofertas-item{
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.titulo {
+    margin: 50px 0;
+    width: 100%;
+    font-size: 15px;
+    font-family: var(--font-one);
+    font-family: var(--font-two);
+}
+
+.titulo h1{
+    margin: 0 20px;
+}
+
+.linha{ 
+    width: 348px;
+    height: 1px;
+    background-color: black;
+}
+
+.camiseta{
+    margin-right: 10px;
+}
+
+.grid-items{
+    display: grid;
+    gap: 20px;
+    width: 50%;
+    grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+}
+
+.btn-ofertas{
+    background-color: var(--imperialred);
+    border-radius: 20px;
+    color:white;
+    font-family: var(--font-one);
+    font-family: var(--font-two);
+    padding: 5px 20px;
+
+}
